@@ -22,7 +22,7 @@ function MapWrapper(props) {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyCPTjVnlXTHh3aok-Wqbli0xp6OGD-tlU0&v",
+    googleMapsApiKey: "redacted",
   });
 
   const [map, setMap] = React.useState(null);
