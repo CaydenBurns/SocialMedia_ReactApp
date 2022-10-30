@@ -91,7 +91,7 @@ function Events() {
     setPageData((pState) => {
       const pageData = { ...pState };
       pageData.arrayOfEvents = eventArr;
-      pageData.eventComponent = eventArr.map(mapRightEvent); // so for every friend we are mapping it here
+      pageData.eventComponent = eventArr.map(mapRightEvent); 
       return pageData;
     });
     setEventPagination((pState) => {
@@ -122,7 +122,7 @@ function Events() {
       newLeftState.arrayOfEvents = [aEvent];
       console.log("newLeftState.arrayOfEvents ", newLeftState.arrayOfEvents);
       newLeftState.eventComponent =
-        newLeftState.arrayOfEvents.map(mapLeftEvent); // why is this not a map function ?
+        newLeftState.arrayOfEvents.map(mapLeftEvent); 
       return newLeftState;
     });
   }
@@ -132,7 +132,7 @@ function Events() {
     aEvent.dateEnd = new Date(aEvent.dateEnd).toDateString();
     return (
       <EventsLeftCard
-        event={aEvent} //this is how we are passing props to the Events card component
+        event={aEvent} 
         key={Math.random() * 12376}
       />
     );
@@ -144,9 +144,9 @@ function Events() {
     aEvent.dateEnd = new Date(aEvent.dateEnd).toDateString();
     return (
       <EventsRightCard
-        event={aEvent} //this is how we are passing props to the Events card component
+        event={aEvent} 
         key={aEvent.id}
-        onEventClicked={toggleModal} // x2 data from on local friend clicked passed here and called click handler with this information
+        onEventClicked={toggleModal} 
         onViewMoreClicked={eventOnViewMore}
       />
     );
@@ -159,9 +159,9 @@ function Events() {
 
     return (
       <EventsRightCard
-        event={aEvent} //this is how we are passing props to the Events card component
+        event={aEvent} 
         key={aEvent.id}
-        onEventClicked={toggleModal} // x2 data from on local friend clicked passed here and called click handler with this information
+        onEventClicked={toggleModal} 
         onViewMoreClicked={eventOnViewMore}
       />
     );
@@ -174,7 +174,7 @@ function Events() {
     const name = target.name;
     setModal((pState) => {
       const SearchData = { ...pState };
-      SearchData[name] = value; //whatever name is changed, its value will update to to state// the name attribute slelects which ever i am on , it will set that value
+      SearchData[name] = value; 
       return SearchData;
     });
   }
@@ -186,7 +186,7 @@ function Events() {
     const name = target.name;
     setModal((pState) => {
       const SearchData = { ...pState };
-      SearchData[name] = value; //whatever name is changed, its value will update to to state// the name attribute slelects which ever i am on , it will set that value
+      SearchData[name] = value; 
       return SearchData;
     });
   }
@@ -198,7 +198,7 @@ function Events() {
     const name = target.name;
     setSearchDate((pState) => {
       const SearchData = { ...pState };
-      SearchData[name] = value; //whatever name is changed, its value will update to to state// the name attribute slelects which ever i am on , it will set that value
+      SearchData[name] = value; 
       return SearchData;
     });
   }
@@ -209,7 +209,7 @@ function Events() {
     const name = target.name;
     setModal((pState) => {
       const SearchData = { ...pState };
-      SearchData[name] = value; //whatever name is changed, its value will update to to state// the name attribute slelects which ever i am on , it will set that value
+      SearchData[name] = value; 
       return SearchData;
     });
   }
