@@ -12,7 +12,7 @@ function Register() {
     password: "",
     passwordConfirm: "",
     avatarUrl: "",
-    tenantId: "",
+    tenantId: "za",
   });
 
   const handleChange = (e) => {
